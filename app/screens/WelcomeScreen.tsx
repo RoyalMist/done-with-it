@@ -1,5 +1,6 @@
 import {Image, ImageBackground, StyleSheet, Text, View} from "react-native";
 import React, {FunctionComponent} from 'react';
+import colors from "../config/colors";
 
 interface OwnProps {
     title: String
@@ -38,12 +39,12 @@ const styles = StyleSheet.create({
     login: {
         height: 70,
         width: "100%",
-        backgroundColor: "#fc5c65"
+        backgroundColor: colors.primary
     },
     register: {
         height: 70,
         width: "100%",
-        backgroundColor: "#4ECDC4"
+        backgroundColor: colors.secondary
     },
 });
 
