@@ -1,11 +1,12 @@
 import React from 'react';
-import WelcomeScreen from "./screens/WelcomeScreen";
 import {StatusBar} from "expo-status-bar";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
     return (
         <>
-            <WelcomeScreen/>
+            {/*<WelcomeScreen/>*/}
+            <ViewImageScreen/>
             <StatusBar style="auto"/>
         </>
     );
