@@ -3,7 +3,7 @@ import React, {FunctionComponent} from "react";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 import colors from "../config/colors";
 
-const ViewImageScreen: FunctionComponent = (props) => {
+const ViewImageScreen: FunctionComponent = () => {
     return (
         <View style={styles.container}>
             <View style={styles.closeIcon}>

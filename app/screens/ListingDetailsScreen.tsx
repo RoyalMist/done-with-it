@@ -4,7 +4,7 @@ import AppText from "../components/AppText";
 import colors from "../config/colors";
 import ListItem from "../components/ListItem";
 
-const ListingDetailsScreen: FunctionComponent = (props) => {
+const ListingDetailsScreen: FunctionComponent = () => {
     return (
         <View>
             <Image style={styles.image} source={require('../assets/jacket.jpg')}/>
