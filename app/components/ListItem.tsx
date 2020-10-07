@@ -1,19 +1,20 @@
 import React, {FunctionComponent} from 'react';
 import {Image, ImageSourcePropType, StyleSheet, View} from "react-native";
-import colors from "../config/colors";
 import AppText from "./AppText";
+import colors from "../config/colors";
 
 interface OwnProps {
+    style?: object
+    image: ImageSourcePropType
     title: string
     subTitle: string
-    image: ImageSourcePropType
 }
 
 type Props = OwnProps;
 
-const Card: FunctionComponent<Props> = ({title, subTitle, image}) => {
+const ListItem: FunctionComponent<Props> = ({style, image, title, subTitle}) => {
     return (
-        <View style={styles.card}>
+        <View style={[styles.container, style]}>
             <Image style={styles.image} source={image}/>
             <View style={styles.detailsContainer}>
                 <AppText style={styles.title}>{title}</AppText>
@@ -24,28 +25,24 @@ const Card: FunctionComponent<Props> = ({title, subTitle, image}) => {
 };
 
 const styles = StyleSheet.create({
-    card: {
-        alignContent: "flex-start",
-        backgroundColor: colors.white,
-        borderRadius: 15,
-        marginBottom: 20,
-        overflow: "hidden"
+    container: {
+        flexDirection: "row"
     },
-    detailsContainer: {
-        padding: 20,
-    },
+    detailsContainer: {},
     image: {
-        height: 200,
-        width: "100%"
+        borderRadius: 35,
+        height: 70,
+        width: 70,
+        marginRight: 10,
     },
     subTitle: {
-        color: colors.secondary,
-        fontWeight: "bold"
+        textTransform: "capitalize",
+        color: colors.medium,
     },
     title: {
-        marginBottom: 7,
+        fontWeight: "500",
         textTransform: "capitalize"
-    },
+    }
 });
 
-export default Card;
+export default ListItem;

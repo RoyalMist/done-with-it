@@ -1,16 +1,19 @@
 import React from 'react';
 import {StatusBar} from "expo-status-bar";
-import Card from "./app/components/Card";
-import {StyleSheet, View} from "react-native";
+import {StyleSheet} from "react-native";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
     return (
         <>
-            {/*<WelcomeScreen tagLine="sell what you don't need!"/>*/}
+            {/*<WelcomeScreen/>*/}
             {/*<ViewImageScreen/>*/}
-            <View style={styles.view}>
+            {/* <View style={styles.view}>
                 <Card title="red jacket for sale!" subTitle="$100" image={require('./app/assets/jacket.jpg')}/>
-            </View>
+            </View>*/}
+
+            <ListingDetailsScreen/>
+
             <StatusBar style="auto"/>
         </>
     );
@@ -18,6 +21,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
     view: {
+        flex: 1,
         backgroundColor: "#c1bfbf",
         padding: 20,
         paddingTop: 100,

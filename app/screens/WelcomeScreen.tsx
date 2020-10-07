@@ -3,18 +3,12 @@ import React, {FunctionComponent} from 'react';
 import colors from "../config/colors";
 import AppButton from "../components/AppButton";
 
-interface OwnProps {
-    tagLine: String
-}
-
-type Props = OwnProps;
-
-const WelcomeScreen: FunctionComponent<Props> = ({tagLine}) => {
+const WelcomeScreen: FunctionComponent = () => {
     return (
         <ImageBackground source={require('../assets/background.jpg')} style={styles.background} blurRadius={10}>
             <View style={styles.logoContainer}>
                 <Image source={require('../assets/logo-red.png')} style={styles.logo}/>
-                <Text style={styles.tagLine}>{tagLine}</Text>
+                <Text style={styles.tagLine}>sell what you don't need!</Text>
             </View>
             <View style={styles.buttonsContainer}>
                 <AppButton text="login" color={colors.primary}/>

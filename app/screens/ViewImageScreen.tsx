@@ -2,12 +2,7 @@ import {Image, StyleSheet, View} from "react-native";
 import React, {FunctionComponent} from "react";
 import colors from "../config/colors";
 
-interface OwnProps {
-}
-
-type Props = OwnProps;
-
-const ViewImageScreen: FunctionComponent<Props> = (props) => {
+const ViewImageScreen: FunctionComponent = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.closeIcon}/>

@@ -2,16 +2,15 @@ import React, {FunctionComponent} from 'react';
 import {Platform, StyleSheet, Text} from "react-native";
 
 interface OwnProps {
-    text: string
     style?: object
 }
 
 type Props = OwnProps;
 
-const AppText: FunctionComponent<Props> = ({text, style}) => {
+const AppText: FunctionComponent<Props> = ({children, style}) => {
     return (
         <Text style={[styles.text, style]}>
-            {text}
+            {children}
         </Text>
     );
 };
