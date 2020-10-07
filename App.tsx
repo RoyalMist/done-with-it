@@ -1,18 +1,17 @@
 import React from 'react';
 import {StatusBar} from "expo-status-bar";
 import {StyleSheet} from "react-native";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
     return (
         <>
             {/*<WelcomeScreen/>*/}
-            {/*<ViewImageScreen/>*/}
+            <ViewImageScreen/>
             {/* <View style={styles.view}>
                 <Card title="red jacket for sale!" subTitle="$100" image={require('./app/assets/jacket.jpg')}/>
             </View>*/}
-
-            <ListingDetailsScreen/>
+            {/*<ListingDetailsScreen/>*/}
 
             <StatusBar style="auto"/>
         </>
