@@ -9,16 +9,16 @@ interface OwnProps {
 
 type Props = OwnProps;
 
-const WelcomeScreen: FunctionComponent<Props> = (props) => {
+const WelcomeScreen: FunctionComponent<Props> = ({tagLine}) => {
     return (
         <ImageBackground source={require('../assets/background.jpg')} style={styles.background} blurRadius={10}>
             <View style={styles.logoContainer}>
                 <Image source={require('../assets/logo-red.png')} style={styles.logo}/>
-                <Text style={styles.tagLine}>{props.tagLine}</Text>
+                <Text style={styles.tagLine}>{tagLine}</Text>
             </View>
             <View style={styles.buttonsContainer}>
-                <AppButton text="login" color={colors.primary} onPress={() => console.log("Login")}/>
-                <AppButton text="register" color={colors.secondary} onPress={() => console.log("Register")}/>
+                <AppButton text="login" color={colors.primary}/>
+                <AppButton text="register" color={colors.secondary}/>
             </View>
         </ImageBackground>
     );
