@@ -1,14 +1,15 @@
-import {Image, ImageBackground, StyleSheet, Text, View} from "react-native";
+import {Image, ImageBackground, Platform, StyleSheet, Text, View} from "react-native";
 import React, {FunctionComponent} from 'react';
 import colors from "../config/colors";
 import AppButton from "../components/AppButton";
+import AppText from "../components/AppText";
 
 const WelcomeScreen: FunctionComponent = () => {
     return (
         <ImageBackground source={require('../assets/background.jpg')} style={styles.background} blurRadius={10}>
             <View style={styles.logoContainer}>
                 <Image source={require('../assets/logo-red.png')} style={styles.logo}/>
-                <Text style={styles.tagLine}>sell what you don't need!</Text>
+                <AppText style={styles.tagLine}>sell what you don't need!</AppText>
             </View>
             <View style={styles.buttonsContainer}>
                 <AppButton text="login" color={colors.primary}/>
