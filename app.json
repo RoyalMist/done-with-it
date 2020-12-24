@@ -23,7 +23,6 @@
       "favicon": "./app/assets/favicon.png"
     },
     "description": "Sell what you don't need",
-    "githubUrl": "https://github.com/RoyalMist/done-with-it",
-    "sdkVersion": "39.0.0"
+    "githubUrl": "https://github.com/RoyalMist/done-with-it"
   }
 }
